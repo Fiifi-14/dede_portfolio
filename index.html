@@ -866,7 +866,7 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">☾</button>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾</button>
         <a class="btn primary hire-btn" href="#contact">Hire Me</a>
       </div>
     </nav>
@@ -1111,7 +1111,8 @@
 
     function setTheme(theme) {
       root.dataset.theme = theme;
-      themeToggle.textContent = theme === "light" ? "☀" : "☾";
+      themeToggle.textContent = theme === "light" ? "☾" : "☀";
+      themeToggle.setAttribute("aria-label", theme === "light" ? "Switch to dark mode" : "Switch to light mode");
       themeToggle.setAttribute("aria-pressed", theme === "light");
     }
 
