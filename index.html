@@ -1091,7 +1091,7 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© 2025 Koffi Dede Terbi · Accra, Ghana</span>
+      <span>© <span id="currentYear">2026</span> Koffi Dede Terbi · Accra, Ghana</span>
       <div class="footer-links">
         <a href="mailto:dedekoffi16@gmail.com">Email</a>
         <a href="tel:0597228811">Phone</a>
@@ -1102,6 +1102,8 @@
 
   <script>
     /* Persist theme preference, falling back to the visitor's system setting. */
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
     const root = document.documentElement;
     const themeToggle = document.querySelector(".theme-toggle");
     const storedTheme = localStorage.getItem("theme");
